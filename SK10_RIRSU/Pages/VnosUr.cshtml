@@ -1,0 +1,27 @@
+﻿@page
+@model SK10_RIRSU.Pages.VnosUrModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moje ure</title>
+    <link rel="stylesheet" type="text/css" href="~/css/calendar.css">
+</head>
+<body>
+    <h1>Vnos ur na delovnem mestu</h1>
+
+    <form method="post">
+        <label for="datum">Datum:</label>
+        <input type="date" id="datum" name="Datum" required>
+
+        <label for="casPrihoda">Čas prihoda:</label>
+        <input type="time" id="casPrihoda" name="CasPrihoda" required>
+
+        <label for="casOdhoda">Čas odhoda:</label>
+        <input type="time" id="casOdhoda" name="CasOdhoda" required>
+
+        <button type="submit">Vnesi ure</button>
+    </form>
+</body>
+</html>
