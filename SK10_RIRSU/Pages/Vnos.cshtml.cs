@@ -7,6 +7,7 @@ namespace SK10_RIRSU.Pages
     {
         public void OnGet()
         {
+
         }
     }
 }

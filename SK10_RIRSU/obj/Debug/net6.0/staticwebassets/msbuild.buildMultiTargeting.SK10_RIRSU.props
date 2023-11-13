@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SK10_RIRSU.props" />
+</Project>

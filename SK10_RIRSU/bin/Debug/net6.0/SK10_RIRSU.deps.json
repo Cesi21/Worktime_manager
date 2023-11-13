@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SK10_RIRSU/1.0.0": {
+        "runtime": {
+          "SK10_RIRSU.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SK10_RIRSU/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

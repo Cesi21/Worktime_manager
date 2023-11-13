@@ -1,0 +1,13 @@
+﻿#calendar {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.calendar-day {
+    border: 1px solid #ddd;
+    min-height: 80px;
+    text-align: center;
+    vertical-align: top;
+}
