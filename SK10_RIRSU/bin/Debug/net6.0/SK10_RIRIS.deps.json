@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SK10_RIRIS/1.0.0": {
+        "runtime": {
+          "SK10_RIRIS.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SK10_RIRIS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
