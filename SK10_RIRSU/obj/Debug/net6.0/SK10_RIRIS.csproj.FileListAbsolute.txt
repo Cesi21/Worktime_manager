@@ -28,3 +28,38 @@ C:\Users\David\OneDrive\Namizje\FERI\Magisterij\1. letnik\1. semester\RIRIS\Proj
 C:\Users\David\OneDrive\Namizje\FERI\Magisterij\1. letnik\1. semester\RIRIS\Projekt\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.pdb
 C:\Users\David\OneDrive\Namizje\FERI\Magisterij\1. letnik\1. semester\RIRIS\Projekt\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.genruntimeconfig.cache
 C:\Users\David\OneDrive\Namizje\FERI\Magisterij\1. letnik\1. semester\RIRIS\Projekt\SK10_RIRSU\obj\Debug\net6.0\ref\SK10_RIRIS.dll
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\appsettings.json
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\SK10_RIRIS.staticwebassets.runtime.json
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\SK10_RIRIS.exe
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\SK10_RIRIS.deps.json
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\SK10_RIRIS.runtimeconfig.json
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\SK10_RIRIS.dll
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\SK10_RIRIS.pdb
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.AssemblyInfoInputs.cache
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.AssemblyInfo.cs
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.csproj.CoreCompileInputs.cache
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.RazorAssemblyInfo.cache
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.RazorAssemblyInfo.cs
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\staticwebassets\msbuild.SK10_RIRIS.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\staticwebassets\msbuild.build.SK10_RIRIS.props
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SK10_RIRIS.props
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SK10_RIRIS.props
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\scopedcss\bundle\SK10_RIRIS.styles.css
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\scopedcss\projectbundle\SK10_RIRIS.bundle.scp.css
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.dll
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\refint\SK10_RIRIS.dll
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.pdb
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.genruntimeconfig.cache
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\ref\SK10_RIRIS.dll
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\runtimes\linux-x64\native\libsqlite3.so
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\runtimes\osx-x64\native\libsqlite3.dylib
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\runtimes\win7-x64\native\sqlite3.dll
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\bin\Debug\net6.0\runtimes\win7-x86\native\sqlite3.dll
+C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\obj\Debug\net6.0\SK10_RIRIS.csproj.CopyComplete

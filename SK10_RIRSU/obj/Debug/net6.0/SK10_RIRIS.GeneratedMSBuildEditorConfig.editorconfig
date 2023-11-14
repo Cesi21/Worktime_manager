@@ -9,53 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SK10_RIRIS
 build_property.RootNamespace = SK10_RIRIS
-build_property.ProjectDir = C:\Users\David\OneDrive\Namizje\FERI\Magisterij\1. letnik\1. semester\RIRIS\Projekt\SK10_RIRSU\
+build_property.ProjectDir = C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\David\OneDrive\Namizje\FERI\Magisterij\1. letnik\1. semester\RIRIS\Projekt\SK10_RIRSU
+build_property.MSBuildProjectDirectory = C:\Users\kristjan.herodez\Source\Repos\skupina10\SK10_RIRSU
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/David/OneDrive/Namizje/FERI/Magisterij/1. letnik/1. semester/RIRIS/Projekt/SK10_RIRSU/Pages/Error.cshtml]
+[C:/Users/kristjan.herodez/Source/Repos/skupina10/SK10_RIRSU/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/OneDrive/Namizje/FERI/Magisterij/1. letnik/1. semester/RIRIS/Projekt/SK10_RIRSU/Pages/Index.cshtml]
+[C:/Users/kristjan.herodez/Source/Repos/skupina10/SK10_RIRSU/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/OneDrive/Namizje/FERI/Magisterij/1. letnik/1. semester/RIRIS/Projekt/SK10_RIRSU/Pages/IzpisOpravljenihUr.cshtml]
+[C:/Users/kristjan.herodez/Source/Repos/skupina10/SK10_RIRSU/Pages/IzpisOpravljenihUr.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXpwaXNPcHJhdmxqZW5paFVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/OneDrive/Namizje/FERI/Magisterij/1. letnik/1. semester/RIRIS/Projekt/SK10_RIRSU/Pages/PregledDopustov.cshtml]
+[C:/Users/kristjan.herodez/Source/Repos/skupina10/SK10_RIRSU/Pages/PregledDopustov.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJlZ2xlZERvcHVzdG92LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/OneDrive/Namizje/FERI/Magisterij/1. letnik/1. semester/RIRIS/Projekt/SK10_RIRSU/Pages/Privacy.cshtml]
+[C:/Users/kristjan.herodez/Source/Repos/skupina10/SK10_RIRSU/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/OneDrive/Namizje/FERI/Magisterij/1. letnik/1. semester/RIRIS/Projekt/SK10_RIRSU/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/kristjan.herodez/Source/Repos/skupina10/SK10_RIRSU/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/OneDrive/Namizje/FERI/Magisterij/1. letnik/1. semester/RIRIS/Projekt/SK10_RIRSU/Pages/Vnos.cshtml]
+[C:/Users/kristjan.herodez/Source/Repos/skupina10/SK10_RIRSU/Pages/Vnos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVm5vcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/OneDrive/Namizje/FERI/Magisterij/1. letnik/1. semester/RIRIS/Projekt/SK10_RIRSU/Pages/VnosUr.cshtml]
+[C:/Users/kristjan.herodez/Source/Repos/skupina10/SK10_RIRSU/Pages/VnosUr.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVm5vc1VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/OneDrive/Namizje/FERI/Magisterij/1. letnik/1. semester/RIRIS/Projekt/SK10_RIRSU/Pages/_ViewImports.cshtml]
+[C:/Users/kristjan.herodez/Source/Repos/skupina10/SK10_RIRSU/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/OneDrive/Namizje/FERI/Magisterij/1. letnik/1. semester/RIRIS/Projekt/SK10_RIRSU/Pages/_ViewStart.cshtml]
+[C:/Users/kristjan.herodez/Source/Repos/skupina10/SK10_RIRSU/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/OneDrive/Namizje/FERI/Magisterij/1. letnik/1. semester/RIRIS/Projekt/SK10_RIRSU/Pages/Shared/_Layout.cshtml]
+[C:/Users/kristjan.herodez/Source/Repos/skupina10/SK10_RIRSU/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-uo6qn2q9c6
