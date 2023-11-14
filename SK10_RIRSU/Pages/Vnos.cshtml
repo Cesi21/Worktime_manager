@@ -6,10 +6,27 @@
 <html>
 <head>
     <title>Moj Koledar</title>
-    <link rel="stylesheet" type="text/css" href="~/css/calendar.css">
+    <link rel="stylesheet" type="text/css" href="~/css/koledar.css">
 </head>
 <body>
-    <div id="calendar"></div>
+
+    <button onclick="sendData()">Shrani</button>
+    <table  style="width:100%">
+        <tr>
+            <th>Dan</th>
+            <th>Prihod</th>
+            <th>Odhod</th>
+        </tr>
+    @foreach (var record in Model.dnevi)
+    {
+            <tr>
+                <td>@record.dan</td>
+                <td class="calendar-cell">@record.pri</td>
+                <td class="calendar-cell">@record.od</td>
+            </tr>
+    }
+
+    </table >
 
     <script src="~/js/calendar.js"></script>
 </body>
