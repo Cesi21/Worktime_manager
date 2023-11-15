@@ -5,6 +5,7 @@ import './App.css';
 import app from './firebaseConfig.js';
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import DataTableView from './Podatki.js'; // Predpostavimo, da ste ustvarili to komponento
+import GrafView from './Grafi.js'; // Predpostavimo, da ste ustvarili to komponento
 
 function App() {
   const [uporabnik, setUporabnik] = useState('');
@@ -25,6 +26,7 @@ function App() {
         datum: formattedDate 
       });
       console.log("Nov dokument uspešno dodan!");
+      
       setUporabnik('');
       setPrihod('');
       setOdhod('');
@@ -45,11 +47,15 @@ function App() {
               <li>
                 <Link to="/data">Prikaži Podatke</Link>
               </li>
+              <li>
+                <Link to="/graf">Prikaži Podatke</Link>
+              </li>
             </ul>
           </nav>
 
           <Routes>
             <Route path="/data" element={<DataTableView />} />
+            <Route path="/graf" element={<GrafView />} />
             <Route path="/" element={
               <div>
                 <img src={logo} className="App-logo" alt="logo" />
