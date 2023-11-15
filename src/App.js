@@ -6,6 +6,7 @@ import app from './firebaseConfig.js';
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import DataTableView from './Podatki.js'; // Predpostavimo, da ste ustvarili to komponento
 import GrafView from './Grafi.js'; // Predpostavimo, da ste ustvarili to komponento
+import DopustView from './Dopusti.js';
 
 function App() {
   const [uporabnik, setUporabnik] = useState('');
@@ -48,7 +49,10 @@ function App() {
                 <Link to="/data">Prikaži Podatke</Link>
               </li>
               <li>
-                <Link to="/graf">Prikaži Podatke</Link>
+                <Link to="/graf">Prikaži Ure</Link>
+              </li>
+              <li>
+                <Link to="/dopust">Dopusti</Link>
               </li>
             </ul>
           </nav>
@@ -56,6 +60,7 @@ function App() {
           <Routes>
             <Route path="/data" element={<DataTableView />} />
             <Route path="/graf" element={<GrafView />} />
+            <Route path="/dopust" element={<DopustView />} />
             <Route path="/" element={
               <div>
                 <img src={logo} className="App-logo" alt="logo" />
