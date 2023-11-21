@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { getFirestore, collection, doc, setDoc, query, where, getDocs } from 'firebase/firestore';
-import './Calendar.css'; // Import your CSS file for calendar styling
+import { getFirestore, collection, doc, setDoc, getDocs } from 'firebase/firestore';
+import app from './firebaseConfig';
+import './Calendar.css';
 
-function Calendar({ app }) {
+function Calendar() {
   const [calendarData, setCalendarData] = useState({});
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth() + 1);
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
@@ -16,7 +17,7 @@ function Calendar({ app }) {
         let data = {};
 
         calendarSnapshot.forEach((doc) => {
-          data = { ...data, [doc.id]: doc.data() };
+          data[doc.id] = doc.data().text; // Assume 'text' is the key for the data
         });
 
         setCalendarData(data);
@@ -46,45 +47,33 @@ function Calendar({ app }) {
 
   const generateCalendar = () => {
     const daysInMonth = new Date(selectedYear, selectedMonth, 0).getDate();
-    const firstDayIndex = new Date(selectedYear, selectedMonth - 1, 1).getDay();
     const calendarDays = [];
 
     for (let i = 1; i <= daysInMonth; i++) {
-      const date = `${selectedYear}-${selectedMonth}-${i}`;
-      const savedText = calendarData[date] || '';
+      const paddedMonth = selectedMonth.toString().padStart(2, '0');
+      const paddedDay = i.toString().padStart(2, '0');
+      const dateKey = `${selectedYear}-${paddedMonth}-${paddedDay}`;
+      const savedText = calendarData[dateKey] || '';
 
       calendarDays.push(
         <div key={i} className="calendar-day">
-          <span className="date">{i}</span>
+          <div className="date">{i}</div> {/* Datum prikazan na vrhu */}
           <textarea
             className="text-input"
             value={savedText}
-            onChange={(e) => handleInputChange(date, e)}
-            onBlur={() => saveDataToFirestore(date)}
-            placeholder="Enter text..."
+            onChange={(e) => handleInputChange(dateKey, e)}
+            onBlur={() => saveDataToFirestore(dateKey)}
+            placeholder=""
           />
         </div>
       );
     }
 
-    const rows = [];
-    let row1 = [], row2 = [], row3 = [];
-
-    for (let i = 0; i < calendarDays.length; i++) {
-      if (i < 10) {
-        row1.push(calendarDays[i]);
-      } else if (i >= 10 && i < 20) {
-        row2.push(calendarDays[i]);
-      } else {
-        row3.push(calendarDays[i]);
-      }
-    }
-
-    rows.push(row1, row2, row3);
-
-    return rows.map((row, index) => (
-      <div key={index} className="calendar-row">{row}</div>
-    ));
+    return (
+      <div className="calendar-grid">
+        {calendarDays}
+      </div>
+    );
   };
 
   const months = [
@@ -107,12 +96,12 @@ function Calendar({ app }) {
           ))}
         </select>
         <select value={selectedYear} onChange={(e) => setSelectedYear(parseInt(e.target.value))}>
-          {years.map((year, index) => (
-            <option key={index} value={year}>{year}</option>
+          {years.map((year) => (
+            <option key={year} value={year}>{year}</option>
           ))}
         </select>
       </div>
-      <div className="calendar-grid">{generateCalendar()}</div>
+      {generateCalendar()}
     </div>
   );
 }

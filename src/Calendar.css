@@ -8,7 +8,6 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
-  color: black; /* Set the color of the title text to black */
 }
 
 .calendar-options {
@@ -21,34 +20,53 @@
   margin-right: 10px;
 }
 
-.calendar-grid {
-  display: flex;
-  flex-direction: column;
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days per row */
+  background-color: #f0f0f0; /* Siva barva ozadja za glavo koledarja */
+  color: #333; /* Temnejša barva teksta za dneve */
+  text-align: center;
 }
 
-.calendar-row {
+.header-cell {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days per row */
+  grid-gap: 10px; /* Space between days */
+  margin-top: 10px; /* Dodan prostor med glavo koledarja in dnevi */
 }
 
 .calendar-day {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* Poravnaj vsebino na začetku */
+  justify-content: center; /* Poravnaj vsebino na vrhu */
+  position: relative; /* Za pozicioniranje številke dneva */
+  min-height: 100px; /* Minimalna višina za vsak kvadrat */
+  padding: 5px; /* Prostor okoli vsebine */
+  border: 1px solid #ccc;
+  color: black;
 }
 
 .date {
+  font-size: 1.2em; /* Večja pisava za številke dni */
   font-weight: bold;
-  margin-bottom: 5px;
-  color: black; /* Set the color of the numbers to black */
+  margin-bottom: 5px; /* Prostor pod številko dneva */
 }
 
 .text-input {
-  width: 100%;
-  padding: 5px;
-  margin-top: 5px;
-  resize: vertical;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  width: 70%; /* Polna širina kvadratka */
+  height: 50px; /* Prilagodi višino, da upošteva prostor za datum */
+  padding: 10px; /* Prostor znotraj območja za vnos teksta */
+  margin: 0; /* Odstrani vse dodatne margine */
+  border: none; /* Odstrani obrobo */
+  border-radius: 3px; /* Rahlo zaobljeni koti */
+  resize: none; /* Onemogoči spreminjanje velikosti */
 }
