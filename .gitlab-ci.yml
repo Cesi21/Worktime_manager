@@ -6,5 +6,5 @@ test_job:
   stage: test
   script:
     - echo "Izvajanje testov..."
-    - npm install firebase react react-router-dom resize-observer-polyfill react-testing-library canvas
+    - npm install firebase react react-router-dom resize-observer-polyfill react-testing-library canvas @grpc/grpc-js@latest
     - npm run test
