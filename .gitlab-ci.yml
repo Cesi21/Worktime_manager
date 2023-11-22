@@ -1,0 +1,9 @@
+stages:
+  - test
+
+test_job:
+  stage: test
+  script:
+    - echo "Izvajanje testov..."
+    - npm install
+    - npm run test
