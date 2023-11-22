@@ -2,8 +2,9 @@ stages:
   - test
 
 test_job:
+  image: node:21-alpine3.18
   stage: test
   script:
     - echo "Izvajanje testov..."
-    - npm install
+    - npm install firebase react react-router-dom
     - npm run test
