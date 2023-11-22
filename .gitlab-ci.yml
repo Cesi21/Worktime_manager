@@ -2,7 +2,7 @@ stages:
   - test
 
 test_job:
-  image: node:slim
+  image: node:latest
   stage: test
   script:
     - echo "Izvajanje testov..."
