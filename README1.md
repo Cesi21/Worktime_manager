@@ -1,1 +1,1 @@
-neki da
+neki da naredi

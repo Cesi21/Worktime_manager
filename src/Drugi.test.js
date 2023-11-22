@@ -1,11 +1,17 @@
-import { render, fireEvent } from '@testing-library/react';
-import App from './App';
+import { render, fireEvent, screen } from '@testing-library/react';
+import App from './Dopusti'; // Predpostavimo, da je to vaša glavna komponenta
 
-test('oddaja obrazca dodaja podatke', () => {
-  const { getByPlaceholderText, getByText } = render(<App />);
-  fireEvent.change(getByPlaceholderText('Uporabnik'), { target: { value: 'testni uporabnik' } });
-  fireEvent.change(getByPlaceholderText('Čas prihoda'), { target: { value: '08:00' } });
-  fireEvent.change(getByPlaceholderText('Čas odhoda'), { target: { value: '16:00' } });
-  fireEvent.click(getByText('Dodaj podatke'));
-  // Preverite, ali je bil klic do Firebase izveden s pravilnimi parametri
-});
+
+
+describe('App Component Tests', () => {
+  test('preverjanje prikaza "calendar-container" ob kliku na Dopusti', () => {
+    const { container } = render(<App />);
+
+    // Klik na povezavo "Dopusti"
+    fireEvent.click(screen.getByText('Dopusti'));
+
+     // Preverjanje, ali se prikaže element z razredom 'calendar-container'
+     const calendarContainer = container.querySelector('.calendar-container');
+     expect(calendarContainer).toBeInTheDocument();
+   });
+ });
