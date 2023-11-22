@@ -1,11 +1,31 @@
-import { render, fireEvent } from '@testing-library/react';
-import DopustView from './Dopusti';
+import { render, fireEvent, screen, waitFor } from '@testing-library/react';
+import App from './App';
 
-test('interakcija s koledarjem dopustov', () => {
-  //const { getByText, getByPlaceholderText } = render(<DopustView />);
-  // Simulirajte interakcijo s koledarjem
-  //fireEvent.change(getByPlaceholderText(''), { target: { value: 'Testni vnos' } });
-  //fireEvent.blur(getByPlaceholderText('')); // ali klik na gumb za shranjevanje
-  // Preverite, ali se spremembe odražajo
-  //expect(getByText('Testni vnos')).toBeInTheDocument();
+describe('App Component Tests', () => {
+  test('preverjanje vnosa in dodajanja podatkov', async () => {
+    render(<App />);
+
+    // Mock console.log and console.error
+    const logSpy = jest.spyOn(console, 'log');
+    const errorSpy = jest.spyOn(console, 'error');
+
+    // Simulate user input
+    fireEvent.change(screen.getByPlaceholderText('Uporabnik'), { target: { value: 'testUser' } });
+    fireEvent.change(screen.getByPlaceholderText('Čas prihoda'), { target: { value: '08:00' } });
+    fireEvent.change(screen.getByPlaceholderText('Čas odhoda'), { target: { value: '16:00' } });
+
+    // Simulate form submission
+    fireEvent.click(screen.getByText('Dodaj podatke'));
+
+    // Wait for async actions to complete
+    await waitFor(() => {
+      expect(logSpy).toHaveBeenCalledWith('Nov dokument uspešno dodan!');
+      // or check for errors
+      // expect(errorSpy).toHaveBeenCalledWith('Napaka pri dodajanju dokumenta:', expect.anything());
+    });
+
+    // Clean up
+    logSpy.mockRestore();
+    errorSpy.mockRestore();
+  });
 });
