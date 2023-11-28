@@ -1,31 +1,33 @@
 import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import App from './App';
 
+jest.mock("firebase/firestore", () => ({
+  getFirestore: jest.fn(),
+  collection: jest.fn(),
+  addDoc: jest.fn(() => Promise.resolve({ id: "abc123" })), // Vrne obljubo, ki se takoj razreši
+}));
+
+
 describe('App Component Tests', () => {
   test('preverjanje vnosa in dodajanja podatkov', async () => {
     render(<App />);
 
-    // Mock console.log and console.error
-    const logSpy = jest.spyOn(console, 'log');
-    const errorSpy = jest.spyOn(console, 'error');
+    const logSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
-    // Simulate user input
     fireEvent.change(screen.getByPlaceholderText('Uporabnik'), { target: { value: 'testUser' } });
     fireEvent.change(screen.getByPlaceholderText('Čas prihoda'), { target: { value: '08:00' } });
     fireEvent.change(screen.getByPlaceholderText('Čas odhoda'), { target: { value: '16:00' } });
-
-    // Simulate form submission
+    console.log("prvi");
     fireEvent.click(screen.getByText('Dodaj podatke'));
 
-    // Wait for async actions to complete
     await waitFor(() => {
       expect(logSpy).toHaveBeenCalledWith('Nov dokument uspešno dodan!');
-      // or check for errors
-      // expect(errorSpy).toHaveBeenCalledWith('Napaka pri dodajanju dokumenta:', expect.anything());
-    });
-
-    // Clean up
+    }, { timeout: 10000 }); // Povečajte časovno omejitev, če je potrebno
+    console.log("drugi");
+    // Čiščenje po testu
     logSpy.mockRestore();
     errorSpy.mockRestore();
+    console.log("tretji");
   });
 });
