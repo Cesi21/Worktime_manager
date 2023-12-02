@@ -1,5 +1,8 @@
+
 stages:
   - test
+  - build
+  - deploy
 
 test_job:
   image: node:slim
@@ -8,3 +11,30 @@ test_job:
     - echo "Izvajanje testov..."
     - npm install firebase react react-router-dom resize-observer-polyfill react-testing-library canvas @grpc/grpc-js@latest
     - npm run test
+  cache:
+    paths:
+      - node_modules/
+
+build_job:
+  image: node:slim
+  stage: build
+  script:
+    - echo "Izvajanje gradnje..."
+    - npm install firebase react react-router-dom resize-observer-polyfill react-testing-library canvas @grpc/grpc-js@latest
+    - npm run build
+  artifacts:
+    paths:
+      - build
+  cache:
+    paths:
+      - node_modules/
+
+deploy_job:
+  image: node:slim
+  stage: deploy
+  script:
+    - echo "Izvajanje namestitve..."
+    - npm install -g firebase-tools firebase react react-router-dom resize-observer-polyfill react-testing-library canvas @grpc/grpc-js@latest
+    - firebase deploy --token 1//03FTh4yqQF-RjCgYIARAAGAMSNwF-L9Irme9-sTLIWtN-6znaJqqfWWrEkcPpxTecBtjkjSei9M1V_JNYNzSz2AVdzwQRLf4_veM
+  only:
+    - master
