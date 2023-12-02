@@ -38,4 +38,4 @@ deploy_job:
     - npm install -g firebase-tools firebase react react-router-dom resize-observer-polyfill react-testing-library canvas @grpc/grpc-js@latest
     - firebase deploy --token 1//03FTh4yqQF-RjCgYIARAAGAMSNwF-L9Irme9-sTLIWtN-6znaJqqfWWrEkcPpxTecBtjkjSei9M1V_JNYNzSz2AVdzwQRLf4_veM
   only:
-    - master
+    - main
