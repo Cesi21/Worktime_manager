@@ -28,7 +28,7 @@ const DopustiGrafView = () => {
 
       const employeeVacationDays = {};
       filteredData.forEach(item => {
-        const date = new Date(item.id);
+
         const employee = item.text; // Predpostavimo, da je 'text' ime zaposlenega
 
         if (!employeeVacationDays[employee]) {

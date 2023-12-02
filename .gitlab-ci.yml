@@ -21,6 +21,7 @@ build_job:
   script:
     - echo "Izvajanje gradnje..."
     - npm install firebase react react-router-dom resize-observer-polyfill react-testing-library canvas @grpc/grpc-js@latest
+    - export CI=false
     - npm run build
   artifacts:
     paths:
