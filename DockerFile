@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Namestite odvisnosti
-RUN npm install
+RUN npm install firebase react react-router-dom resize-observer-polyfill react-testing-library canvas @grpc/grpc-js@latest
 
 # Kopirajte vse datoteke iz lokalnega imenika v delovni imenik kontejnerja
 COPY . .

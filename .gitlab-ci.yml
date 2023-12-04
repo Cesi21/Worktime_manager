@@ -38,11 +38,11 @@ docker_build_job:
     - docker:dind
   script:
     - echo "Izvajanje gradnje Docker slike..."
-    - docker build -t mojeime/mojaaplikacija .
+    - docker build -t cesi2121/rirsreact .
     - echo "Prijava v DockerHub..."
     - docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"
     - echo "Objava slike na DockerHub..."
-    - docker push mojeime/mojaaplikacija
+    - docker push cesi2121/rirsreact
   only:
     - main
 
