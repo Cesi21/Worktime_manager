@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import app from './firebaseConfig';
 
-const DataTableView = () => {
+const DataExView = () => {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const db = getFirestore(app);
@@ -15,26 +15,30 @@ const DataTableView = () => {
     };
 
     fetchData();
-  }, []);
-
-  const calculateOvertime = () => {
-    let totalOvertime = 0;
-    filteredData.forEach(item => {
-    const prihodHours = parseFloat(item.prihod.replace('.', ':').split(':')[0]);
-    const odhodHours = parseFloat(item.odhod.replace('.', ':').split(':')[0]);
-    const delovneUre = odhodHours - prihodHours;
-    const nadure = delovneUre - 8;
-      if (nadure > 0) {
-        totalOvertime = totalOvertime+ nadure;
-      }
-      else if (nadure<0){
-        totalOvertime = totalOvertime+ nadure;
-      }
-    });
-    alert(`Skupno število nadur: ${totalOvertime}`);
-  };
+  }, [db]);
 
   const filteredData = data.filter(item => item.uporabnik.toLowerCase().includes(searchTerm.toLowerCase()));
+
+  const exportToJson = () => {
+    const jsonString = JSON.stringify(filteredData);
+    download(jsonString, "data.json", "text/json");
+  };
+
+  const exportToCsv = () => {
+    let csvString = "Uporabnik,Prihod,Odhod,Datum\n"; // Dodajte glave stolpcev
+    filteredData.forEach(item => {
+      csvString += `${item.uporabnik},${item.prihod},${item.odhod},${item.datum}\n`;
+    });
+    download(csvString, "data.csv", "text/csv");
+  };
+
+  const download = (content, fileName, contentType) => {
+    const a = document.createElement("a");
+    const file = new Blob([content], { type: contentType });
+    a.href = URL.createObjectURL(file);
+    a.download = fileName;
+    a.click();
+  };
 
   return (
     <div>
@@ -45,7 +49,8 @@ const DataTableView = () => {
         onChange={(e) => setSearchTerm(e.target.value)} 
         placeholder="Išči po uporabniku" 
       />
-      <button onClick={calculateOvertime}>Nadure</button>
+      <button onClick={exportToCsv}>Izvozi v CSV</button>
+      <button onClick={exportToJson}>Izvozi v JSON</button>
       <table>
         <thead>
           <tr>
@@ -70,4 +75,4 @@ const DataTableView = () => {
   );
 };
 
-export default DataTableView;
+export default DataExView;

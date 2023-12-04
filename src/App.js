@@ -8,6 +8,7 @@ import DataTableView from './Podatki.js'; // Predpostavimo, da ste ustvarili to 
 import GrafView from './Grafi.js'; // Predpostavimo, da ste ustvarili to komponento
 import DopustView from './Dopusti.js';
 import DopustGrafView from './GrafDopusti.js';
+import DataExView from './Izvoz.js';
 
 function App() {
   const [uporabnik, setUporabnik] = useState('');
@@ -58,6 +59,9 @@ function App() {
               <li>
                 <Link to="/grafdopust">Statistika dopustov</Link>
               </li>
+              <li>
+                <Link to="/izvoz">Izvoz podatkov</Link>
+              </li>
             </ul>
           </nav>
 
@@ -66,6 +70,7 @@ function App() {
             <Route path="/graf" element={<GrafView />} />
             <Route path="/dopust" element={<DopustView />} />
             <Route path="/grafdopust" element={<DopustGrafView />} />
+            <Route path="/izvoz" element={<DataExView />} />
             <Route path="/" element={
               <div>
                 <img src={logo} className="App-logo" alt="logo" />

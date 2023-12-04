@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+build
+.firebase
+.git
+.gitignore
+.gitlab-ci.yml
+README1.md
+*.test.js

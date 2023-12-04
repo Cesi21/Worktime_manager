@@ -8,15 +8,15 @@ test('prikazuje skupno število nadur', () => {
 
   // Renderiranje komponente
   render(<DataTableView />);
-
+  console.log(" ");
   // Sprožitev dogodka, ki bi moral poklicati alert
   fireEvent.click(screen.getByText('Nadure'));
   
 
   // Preverjanje, ali je bila mock funkcija alert poklicana z ustreznim sporočilom
   expect(alertMock).toHaveBeenCalledWith(expect.stringContaining('Skupno število nadur:'));
-
+  console.log(" ");
   // Čiščenje mock funkcije po koncu testa
   alertMock.mockRestore();
-
+  console.log(" ");
 });

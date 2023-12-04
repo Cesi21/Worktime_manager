@@ -2,6 +2,7 @@
 stages:
   - test
   - build
+  - docker-build
   - deploy
 
 test_job:
@@ -29,6 +30,21 @@ build_job:
   cache:
     paths:
       - node_modules/
+
+docker_build_job:
+  image: docker:latest
+  stage: docker-build
+  services:
+    - docker:dind
+  script:
+    - echo "Izvajanje gradnje Docker slike..."
+    - docker build -t mojeime/mojaaplikacija .
+    - echo "Prijava v DockerHub..."
+    - docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"
+    - echo "Objava slike na DockerHub..."
+    - docker push mojeime/mojaaplikacija
+  only:
+    - main
 
 deploy_job:
   image: node:slim
