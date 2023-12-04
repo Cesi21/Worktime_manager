@@ -37,9 +37,9 @@ docker_build_job:
   services:
     - docker:dind
   script:
-    - echo "Izvajanje gradnje Docker slike..."
-    - docker build -t cesi2121/rirsreact .
     - echo "Prijava v DockerHub..."
+    - docker login -u cesi2121 -p Hondacbr125.
+    - echo "Izvajanje gradnje Docker slike..."
     - docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"
     - echo "Objava slike na DockerHub..."
     - docker push cesi2121/rirsreact
