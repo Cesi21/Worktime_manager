@@ -45,6 +45,7 @@ docker_build_job:
     - docker push cesi2121/rirsreact
   only:
     - main
+
  
 deploy_job:
   image: node:slim
