@@ -67,7 +67,7 @@ deploy_to_azure:
     - echo "Nameščanje na Azure..."
     - apt-get update -y
     - apt-get install -y lftp
-    - lftp -c "open -u $AZURE_WEBAPP_USER,$AZURE_WEBAPP_PASSWORD ftp://waws-prod-xxx.ftp.azurewebsites.windows.net/site/wwwroot; mirror -R public /site/wwwroot"
+    - lftp -c "open -u $AZURE_WEBAPP_USER,$AZURE_WEBAPP_PASSWORD ftps://waws-prod-am2-433.ftp.azurewebsites.windows.net/site/wwwroot; mirror -R public /site/wwwroot"
   only:
     - produkcija
 
