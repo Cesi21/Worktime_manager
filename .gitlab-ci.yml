@@ -64,7 +64,6 @@ deploy_job:
 pages:
   stage: pages
   script:
-    - mkdir public
     - cp -r build/* public/
   artifacts:
     paths:
