@@ -1,0 +1,10 @@
+.notifications-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .notifications-list li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }

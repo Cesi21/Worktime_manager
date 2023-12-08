@@ -9,7 +9,7 @@ import GrafView from './Grafi.js'; // Predpostavimo, da ste ustvarili to kompone
 import DopustView from './Dopusti.js';
 import DopustGrafView from './GrafDopusti.js';
 import DataExView from './Izvoz.js';
-
+import NotificationsView from './Osma.js';
 function App() {
   const [uporabnik, setUporabnik] = useState('');
   const [prihod, setPrihod] = useState('');
@@ -62,6 +62,9 @@ function App() {
               <li>
                 <Link to="/izvoz">Izvoz podatkov</Link>
               </li>
+              <li>
+                <Link to="/obvestila">Obvestila</Link>
+              </li>
             </ul>
           </nav>
 
@@ -71,6 +74,7 @@ function App() {
             <Route path="/dopust" element={<DopustView />} />
             <Route path="/grafdopust" element={<DopustGrafView />} />
             <Route path="/izvoz" element={<DataExView />} />
+            <Route path="/obvestila" element={<NotificationsView />} />
             <Route path="/" element={
               <div>
                 <img src={logo} className="App-logo" alt="logo" />

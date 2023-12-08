@@ -4,6 +4,7 @@ stages:
   - build
   - docker-build
   - deploy
+  - pages
 
 test_job:
   image: node:slim
@@ -13,6 +14,7 @@ test_job:
     - npm install firebase react react-router-dom resize-observer-polyfill react-testing-library canvas @grpc/grpc-js@latest
     - npm run test
   cache:
+    
     paths:
       - node_modules/
 
@@ -50,9 +52,23 @@ docker_build_job:
 deploy_job:
   image: node:slim
   stage: deploy
+  enviorments:
+    name: fire
   script:
     - echo "Izvajanje namestitve..."
     - npm install -g firebase-tools firebase react react-router-dom resize-observer-polyfill react-testing-library canvas @grpc/grpc-js@latest
     - firebase deploy --token 1//03FTh4yqQF-RjCgYIARAAGAMSNwF-L9Irme9-sTLIWtN-6znaJqqfWWrEkcPpxTecBtjkjSei9M1V_JNYNzSz2AVdzwQRLf4_veM
   only:
     - main
+
+pages:
+  stage: pages
+  script:
+    - mkdir .public
+    - cp -r build/* .public
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  only:
+    - production
