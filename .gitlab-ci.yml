@@ -59,17 +59,8 @@ deploy_job:
     - npm install -g firebase-tools firebase react react-router-dom resize-observer-polyfill react-testing-library canvas @grpc/grpc-js@latest
     - firebase deploy --token 1//03FTh4yqQF-RjCgYIARAAGAMSNwF-L9Irme9-sTLIWtN-6znaJqqfWWrEkcPpxTecBtjkjSei9M1V_JNYNzSz2AVdzwQRLf4_veM
   only:
-    - main
-
-deploy_to_azure:
-  stage: deploy
-  script:
-    - echo "Nameščanje na Azure..."
-    - apt-get update -y
-    - apt-get install -y lftp
-    - lftp -c "open -u 'RIRS8\\$RIRS8',$AZURE_WEBAPP_PASSWORD ftps://waws-prod-am2-433.ftp.azurewebsites.windows.net/site/wwwroot; mirror -R public /site/wwwroot"
-  only:
     - produkcija
+
 
 pages:
   stage: pages
