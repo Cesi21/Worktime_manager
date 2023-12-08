@@ -61,6 +61,16 @@ deploy_job:
   only:
     - main
 
+deploy_to_azure:
+  stage: deploy
+  script:
+    - echo "Nameščanje na Azure..."
+    - apt-get update -y
+    - apt-get install -y lftp
+    - lftp -c "open -u $AZURE_WEBAPP_USER,$AZURE_WEBAPP_PASSWORD ftp://waws-prod-xxx.ftp.azurewebsites.windows.net/site/wwwroot; mirror -R public /site/wwwroot"
+  only:
+    - produkcija
+
 pages:
   stage: pages
   script:
