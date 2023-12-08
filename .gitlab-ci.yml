@@ -72,4 +72,3 @@ pages:
       - public
   only:
     - production
-    
