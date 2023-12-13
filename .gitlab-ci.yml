@@ -82,7 +82,7 @@ deploy-vercel:
 pages:
   stage: pages
   script:
-    - cp pages_folder/index.html public/index.html
+    - cp -r build/neki.html public/index.html
   artifacts:
     paths:
       - public
