@@ -82,7 +82,7 @@ deploy-vercel:
 pages:
   stage: pages
   script:
-    - cp -r build/* public/
+    - cp pages_folder/index.html public/index.html
   artifacts:
     paths:
       - public
