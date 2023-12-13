@@ -4,6 +4,7 @@ stages:
   - build
   - docker-build
   - deploy
+  - deploy_vercel
   - pages
 
 test_job:
@@ -61,6 +62,21 @@ deploy_job:
   only:
     - produkcija
 
+
+deploy-vercel:
+  image: node:latest
+  stage: deploy_vercel
+  only:
+    - main
+  script:
+    - npm install -g vercel
+    - vercel --token $Vercel_token --prod -y
+  environment:
+    name: main
+    url: https://rirs-student-mitja-cesar-ci-cd.vercel.app
+
+
+0gzf8lwyQP1mgcDpveeAwjre
 
 pages:
   stage: pages
