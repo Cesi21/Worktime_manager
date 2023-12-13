@@ -66,6 +66,8 @@ deploy_job:
 deploy-vercel:
   image: node:latest
   stage: deploy_vercel
+  environment:
+    name: vercel
   only:
     - main
   script:
@@ -76,7 +78,6 @@ deploy-vercel:
     url: https://rirs-student-mitja-cesar-ci-cd.vercel.app
 
 
-0gzf8lwyQP1mgcDpveeAwjre
 
 pages:
   stage: pages
