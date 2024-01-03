@@ -5,6 +5,7 @@ stages:
   - docker-build
   - deploy
   - deploy_vercel
+  - sonar
   - pages
 
 test_job:
@@ -81,13 +82,14 @@ sonarcloud-check:
   image: 
     name: sonarsource/sonar-scanner-cli:latest
     entrypoint: [""]
+  stage: sonar
   variables:
     SONAR_TOKEN: ${SONAR_TOKEN}  
     GIT_DEPTH: "0"  
   script:
     - sonar-scanner
   only:
-    - main  
+    - produkcija  
   allow_failure: false  
 
 
