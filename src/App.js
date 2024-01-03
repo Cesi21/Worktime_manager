@@ -10,6 +10,7 @@ import DopustView from './Dopusti.js';
 import DopustGrafView from './GrafDopusti.js';
 import DataExView from './Izvoz.js';
 import NotificationsView from './Osma.js';
+import MailView from './Mail.js';
 function App() {
   const [uporabnik, setUporabnik] = useState('');
   const [prihod, setPrihod] = useState('');
@@ -65,6 +66,9 @@ function App() {
               <li>
                 <Link to="/obvestila">Obvestila</Link>
               </li>
+              <li>
+                <Link to="/mail">Mail</Link>
+              </li>
             </ul>
           </nav>
 
@@ -75,6 +79,7 @@ function App() {
             <Route path="/grafdopust" element={<DopustGrafView />} />
             <Route path="/izvoz" element={<DataExView />} />
             <Route path="/obvestila" element={<NotificationsView />} />
+            <Route path="/mail" element={<MailView />} />
             <Route path="/" element={
               <div>
                 <img src={logo} className="App-logo" alt="logo" />

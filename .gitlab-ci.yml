@@ -77,6 +77,18 @@ deploy-vercel:
     name: main
     url: https://rirs-student-mitja-cesar-ci-cd.vercel.app
 
+sonarcloud-check:
+  image: 
+    name: sonarsource/sonar-scanner-cli:latest
+    entrypoint: [""]
+  variables:
+    SONAR_TOKEN: ${SONAR_TOKEN}  
+    GIT_DEPTH: "0"  
+  script:
+    - sonar-scanner
+  only:
+    - main  
+  allow_failure: false  
 
 
 pages:
